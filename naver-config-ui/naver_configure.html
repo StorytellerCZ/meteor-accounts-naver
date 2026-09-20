@@ -1,0 +1,38 @@
+<template name="configureLoginServiceDialogForNaver">
+  <p>
+    Register the app in NAVER Developers, then paste Client ID and Client Secret below.
+  </p>
+  <ol>
+    <li>
+      Open
+      <a href="https://developers.naver.com/apps/#/register?api=nvlogin" target="_blank">
+        Application → 애플리케이션 등록
+      </a>
+      and sign in with a NAVER account.
+    </li>
+    <li>
+      Add <strong>네이버 로그인</strong> under 사용 API.
+    </li>
+    <li>
+      Add a <strong>PC 웹</strong> (and <strong>Mobile 웹</strong> if needed) environment.
+    </li>
+    <li>
+      Set 서비스 URL to your site domain (no protocol or port).
+    </li>
+    <li>
+      Set 네이버 로그인 Callback URL to
+      <span class="url">{{siteUrl}}_oauth/naver</span>
+      exactly, including the port for local Meteor.
+    </li>
+    <li>
+      After saving, copy Client ID and Client Secret from
+      <a href="https://developers.naver.com/apps/#/list" target="_blank">내 애플리케이션</a>
+      → 개요.
+    </li>
+  </ol>
+  <p>
+    Prefer Meteor settings? Put the same values in
+    <code>packages.service-configuration.naver</code>
+    as <code>clientId</code> and <code>secret</code>. See this package's README.
+  </p>
+</template>

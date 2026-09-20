@@ -1,2 +1,2 @@
 # meteor-accounts-naver
-Naver OAuth login for MeteorJS
+Naver OAuth login packages for for MeteorJS
